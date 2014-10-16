@@ -1,0 +1,293 @@
+
+/*NOTE TO SELF!!!!
+/* font combos to try: ubuntu and volkorn, ubuntu and open sans
+/* css-tricks: gleamy buttons, shade-outs, ribbon ends, tool-tips
+
+/* GLOBAL STYLE UH!
+--------------------------------------------------
+/* colors */
+.mockup-blue {
+	background-color: #25AAE1;
+	color: #fff;
+}
+.mockup-orange {
+	background-color: #E1AA25;
+}
+.mockup-turq {
+	background-color: #25E1AA;
+}
+.mockup-viored {
+	background-color: #E125AA;
+}
+/* sprites */
+.sprite {
+    background-image: url('../images/featured-sheet.png');
+    background-repeat: no-repeat;
+   /* display: block; */
+}
+
+.sprite-keepcalmCodeon {
+    width: 362px;
+    height: 394px;
+    background-position: 0 0;
+}
+
+.sprite-nbacares {
+    width: 400px;
+    height: 395px;
+    background-position: -362px 0;
+}
+
+.sprite-smashbrosInset {
+    width: 399px;
+    height: 394px;
+    background-position: -762px 0;
+}
+
+/* general styles */
+body {
+	font-family: 'Ubuntu';
+	font-weight: 400;
+  color: #5a5a5a;
+  padding-bottom: 40px;
+}
+
+.btn {
+	color: #fff;
+}
+
+.feature-header {
+	font-family: "Righteous";
+	font-size: 30px;
+	text-align: center;
+	color: #fff;
+	padding: 5px;
+	margin-bottom: 10px;
+	z-index: 2;
+	position: relative;
+}
+
+.feature-section {
+	padding: 20px;
+	min-height: 300px;
+}
+.feature-section:hover {
+	background-color: #E1AA25;
+	z-index: 2;
+}
+.feature-section:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: -1;
+    pointer-events: none;
+  /*
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out; */
+}
+.feature-section:hover:after {
+    z-index: 1; 
+    background: rgba(0,0,0,0.1);    
+}
+.feature-section:hover img, h2, p {
+		position: relative;
+		z-index: 2;
+		color: #3a3a3a;  
+}
+
+
+
+.feature-divider {
+	display: none;
+	width: 60%;
+	margin: 20px 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#self-intro {
+	width: 100%;
+	background-color: #25AAE1;
+}
+
+.say-my-name {
+	font-family: 'Righteous';
+	/*font-size: 5em;*/
+	color: #FFF;
+	text-align: center;
+	padding-top: 10px;
+	margin-top: 0px;
+} .pro-rank {
+	font-family: 'Dosis';
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #FFF;
+	text-align: center;
+	margin-bottom: 10px;
+	z-index: 2;
+}
+
+#myShowcase {
+	height: 500px;
+}
+
+footer {
+	margin-top: 20px;
+}
+
+
+/* Ganked from the Bootstrap PUBLICALLY AVAILABLE Carousel demo template. D.R.Y.!
+/* Several mods tho.
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 100%;
+  margin-bottom: 60px;
+  overflow: hidden;
+
+}
+.carousel-inner {
+	height: 100%;
+	width: 80%;
+	background-color: #000;
+
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+.carousel-caption .btn {
+	font-weight: 320;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  /*height: 500px; */
+  height: 100%;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 100%;
+
+  /* height: 500px; */
+}
+
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+	font-family: 'Dosis';
+	font-weight: 700;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.marketing img {
+	height: 140px;
+	width: 140px;
+}
+.feature-section:hover img{
+	height: 180px;
+	width: 180px;
+}
+
+/* RESPONSIVE CSS modded from Carousel template
+-------------------------------------------------- */
+
+@media (max-width: 400px) {
+	.say-my-name {
+		font-family: 'Righteous';
+		font-size: 3em;
+		color: #FFF;
+		text-align: center;
+	}
+	.feature-divider {
+		display: block;
+	}
+	#myShowcase {
+		height: 250px;
+	}
+	.carousel {
+		height: 200px;
+		margin-bottom: 40px;
+	}
+	.carousel-caption .btn {
+		font-weight: 300;
+	}
+}
+
+@media (min-width: 768px) {
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .feature-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .feature-heading {
+    margin-top: 120px;
+  }
+}
+
+
+/* Super-fly CSS tricks from...CSS-Tricks
+/*
+/* add gleam to buttons */
+.shiny-button {
+	
+   position: relative;
+   overflow: hidden;
+  
+}
+
+.shiny-button:hover {
+	color: #fff;
+}
+
+.shiny-button:before {
+   content: "";
+   width: 200%;
+   height: 200%;
+   position: absolute;
+   top: -50%;
+   left: -225%;
+
+   background-image: -webkit-linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.6), rgba(255,255,255,0)); 
+   background-image: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.6), rgba(255,255,255,0));  
+    
+  -webkit-transition: all 0.5s ease-out;
+   transition: all 0.5s ease-out;
+}
+
+.shiny-button:hover:before {
+  /* top: 200%; */
+  left: 200%;
+}
+
+
