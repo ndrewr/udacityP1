@@ -58,13 +58,34 @@ body {
 
 .feature-header {
 	font-family: "Righteous";
-	font-size: 30px;
+	font-size: 2em;
 	text-align: center;
 	color: #fff;
 	padding: 5px;
 	margin-bottom: 10px;
 	z-index: 2;
 	position: relative;
+}
+.feature-header:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-top: 0.75em solid transparent;
+	border-left: 1em solid #fff;
+	border-bottom: 0.7em solid transparent;
+
+}
+.feature-header:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	width: 0;
+	height: 0;
+	border-top: 0.75em solid transparent;
+	border-right: 1em solid #fff;
+	border-bottom: 0.7em solid transparent;
 }
 
 .feature-section {
@@ -131,6 +152,27 @@ body {
 	margin-bottom: 10px;
 	z-index: 2;
 }
+.pro-rank:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-top: 0.75em solid transparent;
+	border-left: 1em solid #25AAE1;
+	border-bottom: 0.75em solid transparent;
+
+}
+.pro-rank:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	width: 0;
+	height: 0;
+	border-top: 0.75em solid transparent;
+	border-right: 1em solid #25AAE1;
+	border-bottom: 0.75em solid transparent;
+}
 
 #myShowcase {
 	height: 500px;
@@ -142,47 +184,7 @@ footer {
 
 
 /* Ganked from the Bootstrap PUBLICALLY AVAILABLE Carousel demo template. D.R.Y.!
-/* Several mods tho.
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
-.carousel {
-  height: 100%;
-  margin-bottom: 60px;
-  overflow: hidden;
-
-}
-.carousel-inner {
-	height: 100%;
-	width: 80%;
-	background-color: #000;
-
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10;
-}
-.carousel-caption .btn {
-	font-weight: 320;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel .item {
-  /*height: 500px; */
-  height: 100%;
-  background-color: #777;
-}
-.carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 100%;
-
-  /* height: 500px; */
-}
-
+/* Buncha mods tho.
 
 
 /* MARKETING CONTENT
@@ -209,6 +211,50 @@ footer {
 	height: 180px;
 	width: 180px;
 }
+
+/* Lets add tool tips becuz cooool!! */
+.feature-section .btn-wrapper {
+	display: inline-block;
+}
+.feature-section .btn-wrapper:after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 150%;
+    left: -10%;
+    background: #fff;
+    padding: 5px 15px;
+    color: black;
+    border-radius: 10px;
+    white-space: nowrap;
+    opacity: 0;
+     /* At time of this creation, only Fx4 doing pseduo transitions */
+    -webkit-transition: all 0.4s ease;
+  }
+  .feature-section .btn-wrapper:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 20px solid #fff;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    /* At time of this creation, only Fx4 doing pseduo transitions */
+    -webkit-transition: all 0.4s ease;
+    opacity: 0;
+    left: 50%;
+    bottom: 100%;
+  }
+  .feature-section .btn-wrapper:active:after {
+    bottom: 120%;
+  }
+  .feature-section .btn-wrapper:active:before {
+    bottom: 100%;
+  }
+  .feature-section .btn-wrapper:active:after, .feature-section .btn-wrapper:active:before {
+    opacity: 1;
+  }
+
+
 
 /* RESPONSIVE CSS modded from Carousel template
 -------------------------------------------------- */
