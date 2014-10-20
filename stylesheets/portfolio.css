@@ -6,6 +6,9 @@
 /* GLOBAL STYLE UH!
 --------------------------------------------------
 /* colors */
+[attr^="mockup-"], [class*=" mockup-"] {
+	color: #fff;
+}
 .mockup-blue {
 	background-color: #25AAE1;
 	color: #fff;
@@ -157,7 +160,6 @@ body {
 }
 .bottom-logo {
 	display: none;
-
 }
 
 .pro-rank {
@@ -190,6 +192,40 @@ body {
 	border-right: 1em solid #25AAE1;
 	border-bottom: 0.75em solid transparent;
 }
+.colorswatch {
+	display: none;
+	width: 6em;
+	height: 6em;
+	background-color: #fff;
+	border-radius: 1em;
+	border: 2px dotted #E1AA25;
+
+}
+.colorswatch ul {
+	list-style: none;
+}
+.swatch {
+	position: relative;
+	left: -2em;
+	font-size: 1em;
+}
+#self-intro:hover .colorswatch {
+	display: block;
+	position: absolute;
+	top: 30%;
+	bottom: auto;
+	left: auto;
+	right: 10%;
+}
+/*
+.swatch:before {
+	content: '';
+	background-color: #000;
+	width: 1em;
+	height: 1em;
+
+}*/
+
 
 footer p {
 	margin-top: 20px;
