@@ -1,12 +1,14 @@
 /* Custom style sheet for Project 1 Mockup to website */
+/* Builds off included Bootstrap styles for structure and responsiveness */
 
 /* GLOBAL STYLE UH!
 --------------------------------------------------
 /* custom color scheme */
-[class^="mockup"], 
-[class*=" mockup"] {
+[class^='mockup'], 
+[class*=' mockup'] {
 	color: #fff;
 }
+
 .mockup-blue {
 	background-color: #25aae1;
 }
@@ -20,359 +22,8 @@
 	background-color: #e125aa;
 }
 
-/* sprites */
-.sprite {
-    background-image: url('../images/featured-sheet.png');
-    background-repeat: no-repeat;
-   /* display: block; */
-}
-.sprite-keepcalmCodeon {
-    width: 362px;
-    height: 394px;
-    background-position: 0 0;
-}
-.sprite-nbacares {
-    width: 400px;
-    height: 395px;
-    background-position: -362px 0;
-}
-.sprite-smashbrosInset {
-    width: 399px;
-    height: 394px;
-    background-position: -762px 0;
-}
-
-/* general styles */
-body {
-	font-family: 'Ubuntu';
-	font-weight: 400;
-  color: #5a5a5a;
-  padding-bottom: 40px;
-}
-
-.btn {
-	color: #fff;
-}
-
-.feature-header {
-	font-family: "Righteous";
-	font-size: 2em;
-	text-align: center;
-	color: #fff;
-	padding: 5px;
-	margin-bottom: 10px;
-	z-index: 2;
-	position: relative;
-}
-.feature-header:before {
-	content: '';
-	position: absolute;
-	left: 0;
-	width: 0;
-	height: 0;
-	border-top: 0.75em solid transparent;
-	border-left: 1em solid #fff;
-	border-bottom: 0.7em solid transparent;
-
-}
-.feature-header:after {
-	content: '';
-	position: absolute;
-	right: 0;
-	width: 0;
-	height: 0;
-	border-top: 0.75em solid transparent;
-	border-right: 1em solid #fff;
-	border-bottom: 0.7em solid transparent;
-}
-
-.feature-section {
-	padding: 20px;
-	min-height: 300px;
-}
-.feature-section:hover {
-	background-color: #E1AA25;
-	z-index: 2;
-}
-.feature-section:after {
-
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.55);
-    z-index: -1;
-    pointer-events: none;
-  	
-  /*  -webkit-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out; */
-}
-.feature-section:hover:after {
-    z-index: 1; 
-    background: rgba(0,0,0,0.1);    
-}
-.feature-section:hover img, h2, p {
-		position: relative;
-		z-index: 2;
-		color: #3a3a3a;  
-}
-
-.feature-divider {
-	display: none;
-	width: 60%;
-	margin: 20px 0;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-
-#self-intro {
-	width: 100%;
-	background-color: #25AAE1;
-
-	padding-top: 70px;
-}
-
-.say-my-name {
-	font-family: 'Righteous';
-	font-size: 3em;
-	color: #FFF;
-	background: #25AAE1;
-	text-align: center;
-	padding-top: 10px;
-	position: fixed;
-	width: 100%;
-	z-index: 3;
-} 
-.logo {
-	font-size: 1.2em;
-	background-color: #25AAE1;
-	/*position: absolute;
-	-webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg); */
-} .logo:hover {
-	-webkit-transform: scale(1.2, 1.2);
-	transform: scale(1.2, 1.2);
-}
-.bottom-logo {
-	display: none;
-}
-
-.pro-rank {
-	font-family: 'Dosis';
-	font-size: 1.5em;
-	font-weight: 300;
-	color: #FFF;
-	text-align: center;
-	margin-bottom: 10px;
-	z-index: 4;
-}
-/* Yay triangles */
-.pro-rank:before {
-	content: '';
-	position: absolute;
-	left: 0;
-	width: 0;
-	height: 0;
-	border-top: 0.75em solid transparent;
-	border-left: 1em solid #25AAE1;
-	border-bottom: 0.75em solid transparent;
-}
-.pro-rank:after {
-	content: '';
-	position: absolute;
-	right: 0;
-	width: 0;
-	height: 0;
-	border-top: 0.75em solid transparent;
-	border-right: 1em solid #25AAE1;
-	border-bottom: 0.75em solid transparent;
-}
-.colorswatch {
-	display: none;
-	width: 6em;
-	height: 6em;
-	background-color: #fff;
-	border-radius: 1em;
-	border: 2px dotted #E1AA25;
-
-}
-.colorswatch ul {
-	list-style: none;
-}
-.swatch {
-	position: relative;
-	left: -2em;
-	font-size: 1em;
-}
-#self-intro:hover .colorswatch {
-	display: block;
-	position: absolute;
-	top: 30%;
-	bottom: auto;
-	left: auto;
-	right: 10%;
-}
-
-
-footer p {
-	margin-top: 20px;
-	color: #fff;
-}
-
-
-/* Ganked from the Bootstrap PUBLICALLY AVAILABLE Carousel demo template. D.R.Y.!
-/* Buncha mods tho.
-
-/* MARKETING CONTENT (Bootstrap's terminology)
--------------------------------------------------- */
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  margin-bottom: 20px;
-  text-align: center;
-}
-.marketing h2 {
-	font-family: 'Dosis';
-	font-weight: 700;
-}
-.marketing .col-lg-4 p {
-  margin-right: 10px;
-  margin-left: 10px;
-}
-.marketing img {
-	height: 140px;
-	width: 140px;
-}
-.feature-section:hover img{
-	height: 180px;
-	width: 180px;
-}
-
-/* Lets add tool tips becuz cooool!! */
-.feature-section .btn-wrapper {
-	display: inline-block;
-}
-.feature-section .btn-wrapper:after {
-    content: attr(data-tooltip);
-    font-style: italic;
-    position: absolute;
-    bottom: 150%;
-    left: -10%;
-    background: #fff;
-    padding: 5px 15px;
-    color: black;
-    border-radius: 10px;
-    white-space: nowrap;
-    opacity: 0;
-     /* At time of this creation, only Fx4 doing pseduo transitions */
-    -webkit-transition: all 0.4s ease;
-}
-.feature-section .btn-wrapper:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 20px solid #fff;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  /* At time of this creation, only Fx4 doing pseduo transitions */
-  -webkit-transition: all 0.4s ease;
-  opacity: 0;
-  left: 50%;
-  bottom: 100%;
-}
-.feature-section .btn-wrapper:active:after {
-  bottom: 120%;
-}
-.feature-section .btn-wrapper:active:before {
-  bottom: 100%;
-}
-.feature-section .btn-wrapper:active:after, .feature-section .btn-wrapper:active:before {
-  opacity: 1;
-}
-
-
-
-/* RESPONSIVE CSS modded from Carousel template
--------------------------------------------------- */
-
-@media (max-width: 400px) {
-	.say-my-name {
-		font-family: 'Righteous';
-		font-size: 3em;
-		color: #FFF;
-		text-align: center;
-	}
-	.logo {
-		display: none;
-	}
-	#self-intro {
-
-		padding-top: 70px;
-	}
-	.feature-divider {
-		display: block;
-	}
-	.bottom-logo {
-
-		font-size: 8em;
-		text-align: center;
-		display: block;
-	}
-}
-
-@media (min-width: 768px) {
-
-  .say-my-name {
-  	font-size: 4em;
-  }
-  #self-intro {
-  	padding-top: 100px;
-  }
-
-  .feature-heading {
-    font-size: 50px;
-  }
-}
-
-@media (min-width: 992px) {
-  .feature-heading {
-    margin-top: 120px;
-  }
-}
-
-
-/* Super-fly CSS tricks from...CSS-Tricks
-/*
-/* add gleam to buttons */
-.shiny-button {
-   position: relative;
-   overflow: hidden;
-}
-.shiny-button:hover {
-	color: #fff;
-}
-.shiny-button:before {
-   content: "";
-   width: 200%;
-   height: 200%;
-   position: absolute;
-   top: -50%;
-   left: -225%;
-
-   background-image: -webkit-linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.6), rgba(255,255,255,0)); 
-   background-image: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.6), rgba(255,255,255,0));  
-    
-  -webkit-transition: all 0.5s ease-out;
-   transition: all 0.5s ease-out;
-}
-.shiny-button:hover:before {
-  left: 200%;
-}
-
-/* custom fonts from icomoon */
+/* awesome custom fonts from icomoon: https://icomoon.io/ 
+/* includes currently unused social icons */
 @font-face {
 	font-family: 'icomoon';
 	src:url('../fonts/icomoon.eot?cahfeu');
@@ -384,7 +35,8 @@ footer p {
 	font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^='icon-'],
+[class*=' icon-'] {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -399,38 +51,353 @@ footer p {
 }
 
 .icon-handlogo2:before {
-	content: "\e609";
+	content: '\e609';
 }
 .icon-handlogo1:before {
-	content: "\e600";
+	content: '\e600';
 }
-.icon-point-right:before {
-	content: "\e601";
+
+/* general styles */
+body {
+	font-family: 'Ubuntu';
+	font-weight: 400;
+   	color: #5a5a5a;
+  	padding-bottom: 40px;
 }
-.icon-point-down:before {
-	content: "\e602";
+
+ul {
+	list-style: none;
 }
-.icon-point-left:before {
-	content: "\e603";
+
+/* styles the horizontal line element */
+.feature-divider {
+	display: none;
+	width: 60%;
+	margin: 20px 0;
+	margin-left: auto;
+	margin-right: auto;
 }
-.icon-googleplus:before {
-	content: "\e604";
+
+/* name header styles
+-------------------------------------------
+/* the name section is a fixed header with higher z-index */
+.say-my-name {
+	font-family: 'Righteous';
+	font-size: 3em;
+	color: #fff;
+	background: #25aae1;
+	text-align: center;
+	padding-top: 10px;
+	position: fixed;
+	width: 100%;
+	z-index: 3;
 }
-.icon-facebook2:before {
-	content: "\e613";
+
+.logo {
+	font-size: 1.2em;
 }
-.icon-twitter2:before {
-	content: "\e615";
+
+/* "Self-Intro" section
+---------------------------------------------------------------
+/* currently only includes "professional rank". Based on Bootstrap dimensions
+/* Due to fixed name header, top padding used to adjust other content */
+#self-intro {
+	width: 100%;
+	background-color: #25aae1;
+	padding-top: 70px;
 }
-.icon-github:before {
-	content: "\e605";
+
+.pro-rank {
+	font: 300 1.5em/1.42857 'Dosis';
+	text-align: center;
+	margin-bottom: 10px;
 }
-.icon-github2:before {
-	content: "\e606";
+
+/* Yay triangles */
+/* Uses pseudo elements to style the banner with triangles 
+/* From CSS-tricks: http://css-tricks.com/pseudo-element-roundup */
+.pro-rank:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-top: .75em solid transparent;
+	border-left: 1em solid #25aae1;
+	border-bottom: .75em solid transparent;
 }
-.icon-linkedin:before {
-	content: "\e607";
+.pro-rank:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	width: 0;
+	height: 0;
+	border-top: .75em solid transparent;
+	border-right: 1em solid #25aae1;
+	border-bottom: .75em solid transparent;
 }
-.icon-like:before {
-	content: "\e608";
+
+/* Displays the color theme used for the project in a hidden DIV
+/* Defaults to "display:none". Pops up on hover; linter warning noted */
+#colorkey {
+	display: none;
+	width: 6em;
+	height: 6em;
+	background-color: #fff;
+	border-radius: 1em;
+	border: 2px dotted #e1aa25;
+}
+
+.swatch {
+	position: relative;
+	left: -2em;
+	font-size: 1em;
+}
+
+#self-intro:hover #colorkey {
+	display: block;
+	position: absolute;
+	top: 30%;
+	right: 10%;
+}
+
+/* features section 
+--------------------------------------------
+/* Each section has a image, flavor text and button. Builds off bootstrap styles */
+.feature-header {
+	font: 2em/1.35 'Righteous';
+	text-align: center;
+	padding: 5px;
+	margin-bottom: 10px;
+	z-index: 2;
+	position: relative;
+}
+
+/* Uses pseudo elements to style the "works" banner with triangles 
+/* From CSS-tricks: http://css-tricks.com/pseudo-element-roundup */
+.feature-header:before,
+.feature-header:after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: .75em solid transparent;
+	border-bottom: .7em solid transparent;
+}
+.feature-header:before {
+	left: 0;
+	border-left: 1em solid #fff;
+}
+.feature-header:after {
+	right: 0;
+	border-right: 1em solid #fff;
+}
+
+/* Feature sections change background color on hover and up their image size */
+.feature-section {
+	padding: 20px;
+}
+
+.feature-section:hover {
+	background-color: #e1aa25;
+}
+
+/* Background uses a partially transparent body-wide psuedo element lying below the body
+/* On hover this layer is brought up to obscure content besides the feature box
+/* Meant to encourage user to hover over feature box elements
+/* Based on effect from CSS-tricks: http://css-tricks.com/pseudo-element-roundup */
+.feature-section:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.55);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.feature-section:hover:after {
+    z-index: 1; 
+    background: rgba(0,0,0,0.1);    
+}
+
+.feature-section:hover img, h2, p {
+	position: relative;
+	color: #3a3a3a;  
+}
+
+/* enhance the image on hover of a feature-section */
+.feature-section:hover img{
+	height: 180px;
+	width: 180px;
+}
+
+/* Super-fly button gleam on hover
+/* courtesy of CSS tricks: http://css-tricks.com/pseudo-element-roundup
+/* Note: checked caniuse.com for transition effect support;
+/* seems to indicate widespread support for firefox thus no -moz prefix*/
+.shiny-button {
+   position: relative;
+   overflow: hidden;
+}
+
+.shiny-button:hover {
+	color: #fff;
+}
+
+.shiny-button:before {
+   content: "";
+   width: 200%;
+   height: 200%;
+   position: absolute;
+   top: -50%;
+   left: -225%;
+   background-image: -webkit-linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.6), rgba(255,255,255,0)); 
+   background-image: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.6), rgba(255,255,255,0));  
+  -webkit-transition: all .5s ease-out;
+   transition: all .5s ease-out;
+}
+
+.shiny-button:hover:before {
+	left: 200%;
+}
+
+/* Lets add tool tips becuz cooool!!
+/* Buttons on click/active will pop-up cute "tool tips" created from psuedo elements
+/* Elements are transparent until active then slide down above the button
+/* Yup, courtesy of CSS tricks: http://css-tricks.com/pseudo-element-roundup 
+/* "data-tooltip" is a data attr living in a wrapper element surrounding the button*/
+.feature-section .btn-wrapper {
+	display: inline-block;
+}
+
+/* "body" of the tool tip */
+.feature-section .btn-wrapper:after {
+	content: attr(data-tooltip);
+	font-style: italic;
+	position: absolute;
+	bottom: 150%;
+	left: -10%;
+	background: #fff;
+	padding: 5px 15px;
+	color: black;
+	border-radius: 10px;
+	white-space: nowrap;
+	opacity: 0;
+	-webkit-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+/* the little "tail" of the tool-tip */
+.feature-section .btn-wrapper:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 20px solid #fff;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	-webkit-transition: all .4s ease;
+	transition: all .4s ease;
+	opacity: 0;
+	left: 50%;
+	bottom: 100%;
+}
+
+.feature-section .btn-wrapper:active:after {
+ 	bottom: 120%;
+}
+
+.feature-section .btn-wrapper:active:after, 
+.feature-section .btn-wrapper:active:before {
+ 	opacity: 1;
+}
+
+/* footer section styles
+---------------------------------------------------- */
+footer p {
+	margin-top: 20px;
+	color: #fff;
+}
+
+/* defaults to hidden; appears when device screen is 400px or below */
+.bottom-logo {
+	display: none;
+	text-align: center;
+}
+
+/* Ganked from the Bootstrap PUBLICALLY AVAILABLE Carousel demo template. D.R.Y.!
+/* Buncha mods tho.
+/* MARKETING CONTENT (Bootstrap's terminology)
+-------------------------------------------------- */
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.marketing h2 {
+	font-family: 'Dosis';
+	font-weight: 700;
+}
+
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.marketing img {
+	height: 140px;
+	width: 140px;
+}
+
+/* RESPONSIVE CSS media queries modded from Carousel template
+--------------------------------------------------
+/* For small screens, shrink the name header font, hide the logo and adjust spacing
+/* conjure up bottom logo and snazzy divider lines*/
+@media (max-width: 400px) {
+
+	.say-my-name {
+		font-size: 2.7em;
+	}
+
+	.logo {
+		display: none;
+	}
+
+	#self-intro {
+		padding-top: 70px;
+	}
+
+	.feature-divider {
+		display: block;
+	}
+
+	.bottom-logo {
+		font-size: 8em;
+		display: block;
+	}
+}
+
+/* for larger devices, increase name font and adjust spacing */
+@media (min-width: 768px) {
+
+	.say-my-name {
+		font-size: 4em;
+	}
+
+	#self-intro {
+		padding-top: 100px;
+	}
+}
+
+/* bring the logo back to the party. Enbiggen.*/
+@media (min-width: 992px) {
+
+	.bottom-logo {
+		display: block;
+		font-size: 12em;
+	}
 }
