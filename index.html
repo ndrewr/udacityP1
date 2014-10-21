@@ -10,72 +10,69 @@
 	    <link rel="icon" href="op-icon5.ico">
 	    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 	    <link href="stylesheets/portfolio.css" rel="stylesheet">
-	    <link href='http://fonts.googleapis.com/css?family=Dosis:300,400,700|Abel|Ubuntu:400,300italic|Righteous' rel='stylesheet' type='text/css'>
+      <!-- Fonts via Google Fonts-->
+      <!-- Ubuntu for body, Dosis for headlines, Righteous for pop-->
+	    <link href='http://fonts.googleapis.com/css?family=Dosis:300,700|Ubuntu:400,300italic|Righteous' rel='stylesheet' type='text/css'>
 	    <title>Andrew Roy Chen | Udacity Front-End Dev Nanodegree Project 1</title>
 	</head>
 
   <body>
-  	<div class="say-my-name"><span class="icon-handlogoB logo"></span>   Andrew Roy Chen</div>
+    <!-- The name section will be a fixed header w/ logo and name-->
+  	<section class="say-my-name">
+      <span class="icon-handlogo2 logo"></span>   Andrew Roy Chen</section>
+    <!-- Self intro section currently holds title and theme image-->
     <section id="self-intro">
     	<div class="pro-rank mockup-orange">&lt Monkling on the Front-End &gt</div>
+      <!-- In line with mockup image, here is a color key displaying hex values -->
+      <!-- Made it appear on hover-->
       <div class="colorswatch">
         <ul>
-          <li class="swatch" data-color="#25AAE1"><span class="colorblock mockup-blue">#25AAE1</span></li>
-          <li class="swatch" data-color="#E1AA25"><span class="colorblock mockup-orange">#E1AA25</span></li>
-          <li class="swatch" data-color="#25E1AA"><span class="colorblock mockup-turq">#25E1AA</span></li>
-          <li class="swatch" data-color="#E125AA"><span class="colorblock mockup-viored">#E125AA</span></li>
+          <li class="swatch"><span class="mockup-blue">#25AAE1</span></li>
+          <li class="swatch"><span class="mockup-orange">#E1AA25</span></li>
+          <li class="swatch"><span class="mockup-turq">#25E1AA</span></li>
+          <li class="swatch"><span class="mockup-viored">#E125AA</span></li>
         </ul>
       </div>
-    	<img class="img-responsive" src="images/website-development1.png"/>
+    	<img class="img-responsive" src="images/website-development1.png" alt="main theme image">
     </section>
 
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
+    <!-- Project highlight section-->
     <div class="feature-header mockup-viored"><span>featured work!</span></div>
-    <div class="container marketing">
+    <!-- Structural holdover from Bootstrap template-->
+    <section class="container marketing">
       <div class="row">
+        <!-- Interactive elements based on 'hover' and 'active' css states-->
         <div id="project1" class="feature-section col-lg-4 col-md-4 col-sm-4">
-          <img class="img-circle" src="images/keepcalmCodeon.png" alt="">
+          <img class="img-circle" src="images/keepcalmCodeon.png" alt="project image 1">
           <h2>Yay Coding</h2>
-          <p>Javascript? Lets brew. HTML? Mark me up. CSS? Y.E.S. Python? Ssss-weet!</p>
-          <!--<p>We acquire the strength we have overcome.</p> -->
-          <!--<p>Treat a man as he is, and he will remain as he is. Treat a man as he could be, and he will become what he should be.</p> -->
-          <!--<p>Nothing great was ever achieved without enthusiasm.</p> -->
-          <p class="btn-wrapper" data-tooltip="Ya found me :D"><a class="btn mockup-turq shiny-button" href="#project1" role="button">click here »</a></p>
+          <p>Javascript? Lets brew. HTML? On your mark. CSS? Y.E.S. Python? Ss-ss-weet!</p>
+          <!-- Images and buttons have a hover effect; clicks produce a "pop-up" that displays "data-tooltip" message-->
+          <p class="btn-wrapper" data-tooltip="Ya found me :D"><a class="btn mockup-turq shiny-button" href="#project1" role="button">engage »</a></p>
         </div>
         <hr class="feature-divider">
         <div id="project2" class="feature-section col-lg-4 col-md-4 col-sm-4">
-          <img class="img-circle" src="images/smashbrosInset.png" alt="">
+          <img class="img-circle" src="images/smashbrosInset.png" alt="project image 2">
           <h2>Teamwork</h2>
           <p>Everyone I meet is my superior in some way, and in that I learn from him.</p>
-          <!-- <p>In my walks, every man I meet is my superior in some way, and in that I learn from him.</p> -->
           <p class="btn-wrapper" data-tooltip="Hi-5!! d(^_^ )b"><a class="btn mockup-blue shiny-button" href="#project2" role="button">yay team »</a></p>
         </div>
         <hr class="feature-divider">
         <div id="project3" class="feature-section col-lg-4 col-md-4 col-sm-4">
-          <img class="img-circle" src="images/nbacares.png" alt="">
+          <img class="img-circle" src="images/nbacares.png" alt="project image 3">
           <h2>Caring x Sharing</h2>
           <p>You can't do a kindness too soon, for you never know how soon it will be too late.</p>
-          <!--<p>Love, and you shall be loved.</p> -->
           <p class="btn-wrapper" data-tooltip="Love and ye shall be loved."><a class="btn mockup-viored shiny-button" href="#project3" role="button">shine on »</a></p>
         </div>
-      </div>
+      </section>
 
-      <!-- FOOTER -->
+      <!-- FOOTER: structural holdover from Boostrap template-->
+      <!-- Logo image appears on mobile screens only-->
       <footer>
       	<hr class="feature-divider">
-      	<span class="icon-handlogoB bottom-logo"></span>
+      	<span class="icon-handlogo2 bottom-logo"></span>
         <p class="text-center"><a href="#">Back to top</a></p>
-        <p class="text-center">© Andrew Roy Chen 2014 CBA, Inc. &nbsp · <a href="#nuthin">Privacy</a> &nbsp · <a href="#nada">Terms</a></p>
+        <p class="text-center">© Andrew Roy Chen 2014 CBA, Inc. &nbsp ·<a href="#nuthin">Privacy</a> &nbsp ·<a href="#nada">Terms</a></p>
       </footer>
-    </div><!-- /.container -->
-
-    <!-- Needed scripts: Bootstrap.js? Unneeded for project 1
-    ================================================== -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="js/docs.min.js"></script> -->
-  
+    </div><!-- /.container -->  
 	</body>
 </html>

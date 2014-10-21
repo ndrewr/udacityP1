@@ -1,27 +1,25 @@
-
-/*NOTE TO SELF!!!!
-/* font combos to try: ubuntu and volkorn, ubuntu and open sans
-/* css-tricks: gleamy buttons, shade-outs, ribbon ends, tool-tips
+/* Custom style sheet for Project 1 Mockup to website */
 
 /* GLOBAL STYLE UH!
 --------------------------------------------------
-/* colors */
-[attr^="mockup-"], [class*=" mockup-"] {
+/* custom color scheme */
+[class^="mockup"], 
+[class*=" mockup"] {
 	color: #fff;
 }
 .mockup-blue {
-	background-color: #25AAE1;
-	color: #fff;
+	background-color: #25aae1;
 }
 .mockup-orange {
-	background-color: #E1AA25;
+	background-color: #e1aa25;
 }
 .mockup-turq {
-	background-color: #25E1AA;
+	background-color: #25e1aa;
 }
 .mockup-viored {
-	background-color: #E125AA;
+	background-color: #e125aa;
 }
+
 /* sprites */
 .sprite {
     background-image: url('../images/featured-sheet.png');
@@ -217,14 +215,6 @@ body {
 	left: auto;
 	right: 10%;
 }
-/*
-.swatch:before {
-	content: '';
-	background-color: #000;
-	width: 1em;
-	height: 1em;
-
-}*/
 
 
 footer p {
@@ -408,10 +398,10 @@ footer p {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-handlogoB:before {
+.icon-handlogo2:before {
 	content: "\e609";
 }
-.icon-handlogoB2:before {
+.icon-handlogo1:before {
 	content: "\e600";
 }
 .icon-point-right:before {
