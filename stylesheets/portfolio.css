@@ -1,5 +1,7 @@
 /* Custom style sheet for Project 1 Mockup to website */
 /* Builds off included Bootstrap styles for structure and responsiveness */
+/* Background textures from http://lea.verou.me/css3patterns */
+/* CSS-tricks from...http://css-tricks.com/ */
 
 /* GLOBAL STYLE UH!
 --------------------------------------------------
@@ -63,6 +65,14 @@ body {
 	font-weight: 400;
    	color: #5a5a5a;
   	padding-bottom: 40px;
+
+    background: rgba(0,0,0,.55);
+	background-image: linear-gradient(white 2px, transparent 2px),
+		linear-gradient(90deg, white 2px, transparent 2px),
+		linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+	background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+	background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
 }
 
 ul {
@@ -81,20 +91,67 @@ ul {
 /* name header styles
 -------------------------------------------
 /* the name section is a fixed header with higher z-index */
-.say-my-name {
+#say-my-name {
 	font-family: 'Righteous';
 	font-size: 3em;
 	color: #fff;
+
 	background: #25aae1;
+	background-image: linear-gradient(white 2px, transparent 2px),
+		linear-gradient(90deg, white 2px, transparent 2px),
+		linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+	background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+	background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+
 	text-align: center;
 	padding-top: 10px;
 	position: fixed;
 	width: 100%;
-	z-index: 3;
+	z-index: 400;
 }
 
 .logo {
 	font-size: 1.2em;
+	position: relative;
+	margin-right: .4em;
+	color: #fff;
+
+	transition: all .3s linear;
+	
+
+}
+
+@-webkit-keyframes spin {
+	to {
+		transform: scale(1.2, 1.2) rotate(90deg);
+	}
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(90deg);
+	}
+}
+
+.logo:hover {
+	color: #e1aa25;
+
+	transform: scale(1.2, 1.2) rotate(90deg);
+
+	/*-webkit-animation: spin 1s linear infinite;
+	animation: spin 1s linear infinite;*/
+
+	/*
+	animation-name: spin;
+  	animation-duration: .5s;
+  	animation-iteration-count: 1;
+  	animation-timing-function: linear;
+
+  	-webkit-animation-name: spin;
+  	-webkit-animation-duration: .5s;
+  	-webkit-animation-iteration-count: 1;
+  	-webkit-animation-timing-function: linear; */
 }
 
 /* "Self-Intro" section
@@ -103,12 +160,19 @@ ul {
 /* Due to fixed name header, top padding used to adjust other content */
 #self-intro {
 	width: 100%;
-	background-color: #25aae1;
-	padding-top: 70px;
+	background: #25aae1;
+	background-image: linear-gradient(white 2px, transparent 2px),
+		linear-gradient(90deg, white 2px, transparent 2px),
+		linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+	background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+	background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+
+	padding-top: 60px;
 }
 
 .pro-rank {
-	font: 300 1.5em/1.42857 'Dosis';
+	font: 300 1.5em/1.47857 'Dosis';
 	text-align: center;
 	margin-bottom: 10px;
 }
@@ -123,7 +187,7 @@ ul {
 	width: 0;
 	height: 0;
 	border-top: .75em solid transparent;
-	border-left: 1em solid #25aae1;
+	border-left: 1em solid #fff;
 	border-bottom: .75em solid transparent;
 }
 .pro-rank:after {
@@ -133,8 +197,26 @@ ul {
 	width: 0;
 	height: 0;
 	border-top: .75em solid transparent;
-	border-right: 1em solid #25aae1;
+	border-right: 1em solid #fff;
 	border-bottom: .75em solid transparent;
+}
+
+@-webkit-keyframes blink {
+	0% {
+    	color: #fff; 
+	}
+	50% {
+		color: transparent;
+	}
+	100% {
+    	color: #fff; 
+	}
+}
+
+.blinky {
+	-webkit-animation: blink .5s linear infinite;
+	animation: blink .5s linear infinite;
+	border-right: .1em solid;
 }
 
 /* Displays the color theme used for the project in a hidden DIV
@@ -169,7 +251,7 @@ ul {
 	text-align: center;
 	padding: 5px;
 	margin-bottom: 10px;
-	z-index: 2;
+	z-index: 100;
 	position: relative;
 }
 
@@ -214,12 +296,12 @@ ul {
     right: 0;
     bottom: 0;
     background: rgba(0,0,0,.55);
-    z-index: -1;
+    z-index: -100;
     pointer-events: none;
 }
 
 .feature-section:hover:after {
-    z-index: 1; 
+    z-index: 100; 
     background: rgba(0,0,0,0.1);    
 }
 
@@ -326,6 +408,7 @@ footer p {
 .bottom-logo {
 	display: none;
 	text-align: center;
+	font-size: 4em;
 }
 
 /* Ganked from the Bootstrap PUBLICALLY AVAILABLE Carousel demo template. D.R.Y.!
@@ -359,7 +442,7 @@ footer p {
 /* conjure up bottom logo and snazzy divider lines*/
 @media (max-width: 400px) {
 
-	.say-my-name {
+	#say-my-name {
 		font-size: 2.7em;
 	}
 
@@ -368,7 +451,7 @@ footer p {
 	}
 
 	#self-intro {
-		padding-top: 70px;
+		padding-top: 55px;
 	}
 
 	.feature-divider {
@@ -384,12 +467,12 @@ footer p {
 /* for larger devices, increase name font and adjust spacing */
 @media (min-width: 768px) {
 
-	.say-my-name {
+	#say-my-name {
 		font-size: 4em;
 	}
 
 	#self-intro {
-		padding-top: 100px;
+		padding-top: 80px;
 	}
 }
 
@@ -398,6 +481,6 @@ footer p {
 
 	.bottom-logo {
 		display: block;
-		font-size: 12em;
+		font-size: 8em;
 	}
 }
