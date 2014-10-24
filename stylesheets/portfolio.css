@@ -61,7 +61,7 @@
 
 /* general styles */
 body {
-	font-family: 'Ubuntu';
+	font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
 	font-weight: 400;
    	color: #5a5a5a;
   	padding-bottom: 40px;
@@ -92,7 +92,7 @@ ul {
 -------------------------------------------
 /* the name section is a fixed header with higher z-index */
 #say-my-name {
-	font-family: 'Righteous';
+	font-family: 'Righteous', Arial, Helvetica, sans-serif;
 	font-size: 3em;
 	color: #fff;
 	text-align: center;
@@ -140,8 +140,8 @@ ul {
 	-webkit-animation: spin 4s linear infinite;
 	animation: spin 4s linear infinite; */
 
-    -webkit-transition: -webkit-transform 1s linear;
-    transition: transform 1s linear;
+    -webkit-transition: -webkit-transform .5s linear;
+    transition: transform .5s linear;
     -webkit-transform: scale(1.2, 1.2) rotate(90deg);
 	transform: scale(1.2, 1.2) rotate(90deg);
 }
@@ -164,7 +164,7 @@ ul {
 }
 
 .pro-rank {
-	font: 300 1.5em/1.47857 'Dosis';
+	font: 300 1.5em/1.47857 'Dosis', Arial, Helvetica, sans-serif;
 	text-align: center;
 	margin-bottom: 10px;
 	padding: 5px;
@@ -240,7 +240,7 @@ ul {
 --------------------------------------------
 /* Each section has a image, flavor text and button. Builds off bootstrap styles */
 .feature-header {
-	font: 2em/1.35 'Righteous';
+	font: 2em/1.35 'Righteous', Arial, Helvetica, sans-serif;
 	text-align: center;
 	padding: 5px;
 	margin-bottom: 10px;
@@ -343,12 +343,12 @@ ul {
 /* Elements are transparent until active then slide down above the button
 /* Yup, courtesy of CSS tricks: http://css-tricks.com/pseudo-element-roundup 
 /* "data-tooltip" is a data attr living in a wrapper element surrounding the button*/
-.feature-section .btn-wrapper {
+.btn-wrapper {
 	display: inline-block;
 }
 
 /* "body" of the tool tip */
-.feature-section .btn-wrapper:after {
+.btn-wrapper:after {
 	content: attr(data-tooltip);
 	font-style: italic;
 	position: absolute;
@@ -365,7 +365,7 @@ ul {
 }
 
 /* the little "tail" of the tool-tip */
-.feature-section .btn-wrapper:before {
+.btn-wrapper:before {
 	content: "";
 	position: absolute;
 	width: 0;
@@ -380,12 +380,12 @@ ul {
 	bottom: 100%;
 }
 
-.feature-section .btn-wrapper:active:after {
+.btn-wrapper:active:after {
  	bottom: 120%;
 }
 
-.feature-section .btn-wrapper:active:after, 
-.feature-section .btn-wrapper:active:before {
+.btn-wrapper:active:after, 
+.btn-wrapper:active:before {
  	opacity: 1;
 }
 
@@ -420,7 +420,7 @@ footer p {
 }
 
 .marketing h2 {
-	font-family: 'Dosis';
+	font-family: 'Dosis', Arial, Helvetica, sans-serif;
 	font-weight: 700;
 }
 
