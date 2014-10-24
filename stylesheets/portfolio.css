@@ -1,6 +1,6 @@
 /* Custom style sheet for Project 1 Mockup to website */
 /* Builds off included Bootstrap styles for structure and responsiveness */
-/* Background textures from http://lea.verou.me/css3patterns */
+/* Background CSS from http://lea.verou.me/css3patterns */
 /* CSS-tricks from...http://css-tricks.com/ */
 
 /* GLOBAL STYLE UH!
@@ -95,6 +95,11 @@ ul {
 	font-family: 'Righteous';
 	font-size: 3em;
 	color: #fff;
+	text-align: center;
+	padding-top: 10px;
+	position: fixed;
+	width: 100%;
+	z-index: 400;
 
 	background: #25aae1;
 	background-image: linear-gradient(white 2px, transparent 2px),
@@ -103,12 +108,6 @@ ul {
 		linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
 	background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
 	background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
-
-	text-align: center;
-	padding-top: 10px;
-	position: fixed;
-	width: 100%;
-	z-index: 400;
 }
 
 .logo {
@@ -117,41 +116,35 @@ ul {
 	margin-right: .4em;
 	color: #fff;
 
-	transition: all .3s linear;
-	
-
+	-webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes spin {
 	to {
-		transform: scale(1.2, 1.2) rotate(90deg);
+		transform: scale(1.2, 1.2) rotate(1080deg);
 	}
 }
 
 @keyframes spin {
 	to {
-		transform: rotate(90deg);
+		transform: rotate(1080deg);
 	}
 }
 
 .logo:hover {
 	color: #e1aa25;
 
+	-webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+/*
+	-webkit-animation: spin 4s linear infinite;
+	animation: spin 4s linear infinite; */
+
+    -webkit-transition: -webkit-transform 1s linear;
+    transition: transform 1s linear;
+    -webkit-transform: scale(1.2, 1.2) rotate(90deg);
 	transform: scale(1.2, 1.2) rotate(90deg);
-
-	/*-webkit-animation: spin 1s linear infinite;
-	animation: spin 1s linear infinite;*/
-
-	/*
-	animation-name: spin;
-  	animation-duration: .5s;
-  	animation-iteration-count: 1;
-  	animation-timing-function: linear;
-
-  	-webkit-animation-name: spin;
-  	-webkit-animation-duration: .5s;
-  	-webkit-animation-iteration-count: 1;
-  	-webkit-animation-timing-function: linear; */
 }
 
 /* "Self-Intro" section
@@ -175,32 +168,33 @@ ul {
 	font: 300 1.5em/1.47857 'Dosis';
 	text-align: center;
 	margin-bottom: 10px;
+	padding: 5px;
 }
 
 /* Yay triangles */
 /* Uses pseudo elements to style the banner with triangles 
 /* From CSS-tricks: http://css-tricks.com/pseudo-element-roundup */
-.pro-rank:before {
-	content: '';
-	position: absolute;
-	left: 0;
-	width: 0;
-	height: 0;
-	border-top: .75em solid transparent;
-	border-left: 1em solid #fff;
-	border-bottom: .75em solid transparent;
-}
+.pro-rank:before,
 .pro-rank:after {
 	content: '';
 	position: absolute;
-	right: 0;
 	width: 0;
 	height: 0;
 	border-top: .75em solid transparent;
-	border-right: 1em solid #fff;
 	border-bottom: .75em solid transparent;
 }
 
+.pro-rank:before {
+	left: 0;
+	border-left: 1em solid #fff;
+}
+.pro-rank:after {
+	right: 0;
+	border-right: 1em solid #fff;
+}
+
+/* apply a text-editor effect */
+/* Idea: http://lea.verou.me/2012/02/simpler-css-typing-animation-with-the-ch-unit */
 @-webkit-keyframes blink {
 	0% {
     	color: #fff; 
@@ -214,9 +208,9 @@ ul {
 }
 
 .blinky {
-	-webkit-animation: blink .5s linear infinite;
-	animation: blink .5s linear infinite;
-	border-right: .1em solid;
+	-webkit-animation: blink 1s linear infinite;
+	animation: blink 1s linear infinite;
+	/*border-right: .1em solid;*/
 }
 
 /* Displays the color theme used for the project in a hidden DIV
@@ -239,7 +233,7 @@ ul {
 #self-intro:hover #colorkey {
 	display: block;
 	position: absolute;
-	top: 30%;
+	top: 33%;
 	right: 10%;
 }
 
@@ -251,7 +245,6 @@ ul {
 	text-align: center;
 	padding: 5px;
 	margin-bottom: 10px;
-	z-index: 100;
 	position: relative;
 }
 
@@ -409,6 +402,12 @@ footer p {
 	display: none;
 	text-align: center;
 	font-size: 4em;
+}
+
+.bottom-logo:hover {
+	transition: transform, color 1s linear;
+	color: #fff;
+	transform: rotate(-45deg);
 }
 
 /* Ganked from the Bootstrap PUBLICALLY AVAILABLE Carousel demo template. D.R.Y.!
