@@ -115,11 +115,11 @@ ul {
 	position: relative;
 	margin-right: .4em;
 	color: #fff;
-
-	-webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
+	display: inline-block;
 }
 
+/* unused animation */
+/* Even running infinite, completion of each iteration is janky
 @-webkit-keyframes spin {
 	to {
 		transform: scale(1.2, 1.2) rotate(1080deg);
@@ -130,14 +130,13 @@ ul {
 	to {
 		transform: rotate(1080deg);
 	}
-}
+} */
 
 .logo:hover {
 	color: #e1aa25;
 
-	-webkit-animation-fill-mode: forwards;
+/*	-webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-/*
 	-webkit-animation: spin 4s linear infinite;
 	animation: spin 4s linear infinite; */
 
